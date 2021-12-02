@@ -29,6 +29,21 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   breakpoints: {
-    sm: '768px',
+    sm: '576px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
+    xxl: '1400px',
+  },
+  typography: {
+    h1: '4rem',
+    h2: '3rem',
+    h3: '2rem',
+    text: '1.3rem',
+  },
+  spacing: {
+    sm: '0.75rem',
+    md: '1.5rem',
+    lg: '2.5rem',
   },
 };

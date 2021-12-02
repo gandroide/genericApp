@@ -16,14 +16,25 @@ declare module 'styled-components' {
         black: string;
         white: string;
       };
-      typography: {
-        light: string;
-        default: string;
-        dark: string;
-      };
+      typography: IPalette;
     };
     breakpoints: {
       sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+      xxl: string;
+    };
+    typography: {
+      h1: string;
+      h2: string;
+      h3: string;
+      text: string;
+    };
+    spacing: {
+      sm: string;
+      md: string;
+      lg: string;
     };
   }
 }
