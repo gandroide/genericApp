@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default createGlobalStyle`
  * {
-   margin: ${({ theme }) => theme.spacing.md};;
+   margin: 0;
    padding: 0;
    box-sizing: border-box;
   }
