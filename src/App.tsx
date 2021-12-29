@@ -1,33 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Container } from './styles/Container.styles';
 import GlobalStyles from './styles';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './styles/theme';
-import { toast, ToastContainer } from 'react-toastify';
+import { NavBar } from './components/NavBar';
+import { CustomButton } from './components/CustomButton';
 
 export const App: FC = () => {
-  const notify = () => {
-    toast('🦄 Wow so easy!', {
-      position: 'top-left',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      type: 'info',
-    });
-  };
+  const [expanded, setExpanded] = useState(false);
 
+  const onExpanded = () => {
+    setExpanded(prevState => !prevState);
+  };
+  //retirar la div con los estilos de prueba
   return (
     <>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyles />
-        <Container>
-          <button onClick={notify}>Notify!</button>
+        <NavBar expanded={expanded} onExpanded={onExpanded} />
+        <Container expanded={expanded}>
+          <h1>Hello World</h1>
+          <div style={{ width: '15rem' }}>
+            <CustomButton text="Click" />
+          </div>
         </Container>
       </ThemeProvider>
-      <ToastContainer />
     </>
   );
 };

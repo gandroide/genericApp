@@ -8,6 +8,16 @@ export default createGlobalStyle`
    box-sizing: border-box;
   }
 
+  .Toastify__toast-theme--colored.Toastify__toast--info {
+    background-color: "red" !important
+  }
+  .Toastify__toast-theme--colored.Toastify__toast--success {
+  }
+  .Toastify__toast-theme--colored.Toastify__toast--warning {
+  }
+  .Toastify__toast-theme--colored.Toastify__toast--error {
+  }
+
   html {
     font-size: 75%;
 
