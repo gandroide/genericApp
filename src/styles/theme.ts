@@ -29,7 +29,7 @@ export const defaultTheme: DefaultTheme = {
     },
   },
   breakpoints: {
-    sm: '576px',
+    sm: `(min-width: 576px)`,
     md: '768px',
     lg: '992px',
     xl: '1200px',

@@ -8,7 +8,7 @@ export const Button = styled.button`
   padding: 5px 10px 5px 10px;
   cursor: pointer;
   backface-visibility: hidden;
-  background-color: #405cf5;
+  background-color: ${({ theme }) => theme.palette.blue.default};
   border-width: 0;
   color: #fff;
   font-size: 100%;
@@ -17,7 +17,7 @@ export const Button = styled.button`
   margin: 12px 0 0;
   outline: none;
   overflow: hidden;
-  padding: 0 25px;
+  padding: 0 10px;
   position: relative;
   text-align: center;
   text-transform: none;

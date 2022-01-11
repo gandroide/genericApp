@@ -1,9 +1,7 @@
 import React, { FC } from 'react';
+import { ICustomButton } from '../../interfaces';
 import { Button } from './styled';
 
-interface ICustomButton {
-  text: string;
-}
-export const CustomButton: FC<ICustomButton> = ({ text }) => {
-  return <Button>{text}</Button>;
+export const CustomButton: FC<ICustomButton> = ({ text, onClick }) => {
+  return <Button onClick={onClick}>{text}</Button>;
 };

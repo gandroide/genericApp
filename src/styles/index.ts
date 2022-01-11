@@ -47,4 +47,8 @@ export default createGlobalStyle`
   h3 {
     font-size: ${({ theme }) => theme.typography.h3};
   }
+
+  ul {
+    list-style: none;
+  }
 `;

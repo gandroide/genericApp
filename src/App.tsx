@@ -4,7 +4,8 @@ import GlobalStyles from './styles';
 import { ThemeProvider } from 'styled-components';
 import { defaultTheme } from './styles/theme';
 import { NavBar } from './components/NavBar';
-import { CustomButton } from './components/CustomButton';
+import { MenuProvider } from './context/MenuContext';
+import { ListOfCards } from './components/ListOfCards';
 
 export const App: FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -12,19 +13,17 @@ export const App: FC = () => {
   const onExpanded = () => {
     setExpanded(prevState => !prevState);
   };
-  //retirar la div con los estilos de prueba
+
   return (
-    <>
-      <ThemeProvider theme={defaultTheme}>
-        <GlobalStyles />
-        <NavBar expanded={expanded} onExpanded={onExpanded} />
-        <Container expanded={expanded}>
-          <h1>Hello World</h1>
-          <div style={{ width: '15rem' }}>
-            <CustomButton text="Click" />
-          </div>
-        </Container>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={defaultTheme}>
+      <MenuProvider />
+      <GlobalStyles />
+      <NavBar expanded={expanded} onExpanded={onExpanded} />
+      <Container expanded={expanded}>
+        <h1>HUB</h1>
+        <ListOfCards />
+      </Container>
+      <MenuProvider />
+    </ThemeProvider>
   );
 };

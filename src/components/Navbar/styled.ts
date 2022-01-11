@@ -10,7 +10,7 @@ export const NavBarContainer = styled.div<INavBarExpand>`
   flex-direction: column;
   border-right-style: solid;
   border-color: ${({ theme }) => theme.palette.blue.light};
-  min-width: ${({ expanded }) => (expanded ? '20vw' : '10vw')};
+  width: ${({ expanded }) => (expanded ? '200px' : '150px')};
   height: 100vh;
   position: fixed;
 `;
