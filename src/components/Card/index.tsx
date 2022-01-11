@@ -5,7 +5,6 @@ interface N {
   data: IMenu;
 }
 export const Card: FC<N> = data => {
-  console.log(data, 'menu');
   return (
     <CardContainer>
       <h2>Menu Title</h2>

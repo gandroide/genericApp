@@ -28,6 +28,7 @@ module.exports = {
   },
   devServer: {
     static: path.resolve(__dirname, 'src'),
+    historyApiFallback: true,
   },
   plugins: [
     new htmlWebpackPlugin({
